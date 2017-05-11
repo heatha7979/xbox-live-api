@@ -34,8 +34,8 @@
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
     <ApplicationType>Windows Store</ApplicationType>
-    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
-    <WindowsTargetPlatformMinVersion>10.0.10586.0</WindowsTargetPlatformMinVersion>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.15063.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -43,37 +43,37 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -228,11 +228,8 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Build\Microsoft.Xbox.Services.140.UWP.Cpp\Microsoft.Xbox.Services.140.UWP.Cpp.vcxproj">
+    <ProjectReference Include="..\..\..\..\..\Build\Microsoft.Xbox.Services.141.UWP.C\Microsoft.Xbox.Services.141.UWP.C.vcxproj">
       <Project>{8f96710e-5169-4917-8874-7de248f4d243}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\External\cpprestsdk\Release\src\build\vs14.uwp\cpprestsdk140.uwp.static.vcxproj">
-      <Project>{9ad285a2-301e-47a0-a299-14ad5d4f2758}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\..\InProgressSamples\Kits\DirectXTK\DirectXTK_Windows10.vcxproj">
       <Project>{f4776924-619c-42c7-88b2-82c947ccc9e7}</Project>
@@ -246,7 +243,6 @@
     <Image Include="Assets\StoreLogo.scale-100.png" />
     <Image Include="Assets\WideLogo.scale-100.png" />
     <Image Include="Assets\windowslogo.dds" />
-    <None Include="packages.config" />
     <None Include="xboxservices.config">
       <DeploymentContent>true</DeploymentContent>
     </None>
@@ -266,20 +262,5 @@
     <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ImageContentTask.targets" />
     <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\MeshContentTask.targets" />
     <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ShaderGraphContentTask.targets" />
-    <Import Project="..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.targets" Condition="Exists('..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.targets')" />
-    <Import Project="..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.Symbols.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.Symbols.targets" Condition="Exists('..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.Symbols.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.Symbols.targets')" />
-    <Import Project="..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.targets" Condition="Exists('..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.targets')" />
-    <Import Project="..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.Symbols.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.Symbols.targets" Condition="Exists('..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.Symbols.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.Symbols.targets')" />
-    <Import Project="..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.targets" Condition="Exists('..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.targets')" />
   </ImportGroup>
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.targets'))" />
-    <Error Condition="!Exists('..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.Symbols.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.Symbols.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.Symbols.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.Symbols.targets'))" />
-    <Error Condition="!Exists('..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.targets'))" />
-    <Error Condition="!Exists('..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.Symbols.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.Symbols.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.Symbols.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.Symbols.targets'))" />
-    <Error Condition="!Exists('..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\External\Packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2017.04.20170412.001\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.targets'))" />
-  </Target>
 </Project>

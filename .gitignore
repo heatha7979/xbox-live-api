@@ -9,6 +9,13 @@
 **/.vs/
 **/project.lock.json
 
+Tests/UnityProject/XBL_C1/Build/
+Tests/UnityProject/XBL_C1/Library/
+Tests/UnityProject/XBL_C1/Temp/
+Tests/UnityProject/XBL_C1/UWP/
+Tests/UnityProject/XBL_C1/Assets/WSATestCertificate.*
+Tests/UnityProject/XBL_C1/Assets/Microsoft.Xbox.Services.141.UWP.C.*
+
 Casablanca*/Build_iOS/OpenSSL-for-iPhone/
 Casablanca*/Build_iOS/boostoniphone/
 Casablanca*/Build_iOS/openssl/

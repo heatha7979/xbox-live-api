@@ -103,6 +103,5 @@
       <Filter>Assets</Filter>
     </None>
     <None Include="xboxservices.config" />
-    <None Include="packages.config" />
   </ItemGroup>
 </Project>
