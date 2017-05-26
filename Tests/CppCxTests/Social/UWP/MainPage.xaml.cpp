@@ -23,6 +23,7 @@ using namespace Windows::UI::Xaml::Data;
 using namespace Windows::UI::Xaml::Input;
 using namespace Windows::UI::Xaml::Media;
 using namespace Windows::UI::Xaml::Navigation;
+using namespace Microsoft::Xbox::Services;
 
 struct ScenarioDescriptionItem
 {
@@ -182,6 +183,26 @@ void MainPage::SignIn()
             if (result->Status == Microsoft::Xbox::Services::System::SignInStatus::Success)
             {
                 m_xboxLiveContext = ref new Microsoft::Xbox::Services::XboxLiveContext(m_user);
+
+                auto contextSettings = ref new XboxLiveContextSettings();
+
+                Windows::Foundation::TimeSpan timeout = { 60 * 10000000 };
+                contextSettings->HttpTimeoutWindow = timeout;
+
+                //extract server and path + query from passed in url
+                auto uri = ref new Windows::Foundation::Uri("https://social.xboxlive.com/users/xuid(2533274804657879)/people");
+                String^ serverName = uri->SchemeName + "://" + uri->Host + ":" + uri->Port;
+                String^ pathAndQuery = uri->Path + uri->Query;
+                auto httpCall = XboxLiveHttpCall::CreateXboxLiveHttpCall(contextSettings, L"POST", serverName, pathAndQuery);
+                httpCall->SetRequestBody("{\"ConsoleUpdateProgress\":62.6632282802198}");
+                //httpCall->RetryAllowed = true;
+                auto asyncOp = httpCall->GetResponseWithoutAuth(HttpCallResponseBodyType::StringBody);
+                create_task(asyncOp)
+                .then([this](task<XboxLiveHttpCallResponse^> t)
+                {
+                    t.get();
+                });
+
                 this->UserInfoLabel->Text = L"Sign in succeeded";
             }
             else if (result->Status == Microsoft::Xbox::Services::System::SignInStatus::UserCancel)
